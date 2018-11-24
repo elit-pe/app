@@ -61,6 +61,6 @@ const stylesNews = StyleSheet.create({
   image: {
     justifyContent: 'flex-end',
     borderRadius: 5,
-    height: 125,
+    height: 100,
   },
 });

@@ -31,7 +31,7 @@ const items = [
 
 export default class AccountScreen extends React.Component {
   static navigationOptions = {
-    title: 'app.json',
+    title: 'Conta',
   };
 
   renderItem = ({ item, index }) => (
