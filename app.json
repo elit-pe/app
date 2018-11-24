@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MyProject",
-    "description": "A very interesting project.",
-    "slug": "MyProject",
+    "name": "EasyBuy",
+    "description": "Compras rápidas e marketing espontâneo.",
+    "slug": "EasyBuy",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],
