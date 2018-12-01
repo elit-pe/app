@@ -8,38 +8,8 @@ import {
   Text,
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
-
-const items = [
-  { uri: 'http://www.portalarp.com.br/arquivos/produtos/AUCAR_CRISTAL_PACOTE_C_05_KG.jpg', 
-  product: 'Açucar Cristal 1KG' },
-  { uri: 'https://tudoemcafe.com/wp-content/uploads/2014/11/06-caf%C3%A9-pil%C3%A3o-1kg-001.jpg', 
-  product: 'Café Pilão' },
-
-  { uri: 'https://http2.mlstatic.com/pasta-de-dente-colgate-maxima-proteco-D_NQ_NP_807703-MLB26465995102_112017-F.jpg', 
-  product: 'Pasta de Dente Colgate' },
-  { uri: 'https://facafeira.com/wp-content/uploads/2018/05/65349a9315285cfa62bc29bf31fbd0cf.png', 
-  product: 'Pacote Macarrão Vitarella' },
-  { uri: 'https://www.paodeacucar.com/img/uploads/1/591/554591.png?type=product', 
-  product: 'Bandeja Danoninho 6 Uni.' },
-  { uri: 'https://http2.mlstatic.com/S_174611-MLB20601716685_022016-O.jpg', 
-  product: 'Caixa de Chocolate Nestle' },
-  { uri: 'https://images-americanas.b2w.io/produtos/01/00/sku/30589/9/30589963_1SZ.jpg', 
-  product: 'Vinho Quinta do Morgado' },
-  { uri: 'https://muffatosupermercados.vteximg.com.br/arquivos/ids/221186-400-400/Fuba-Mimoso-Yoki-Pacote-500g-17003.jpg?v=636160058692900000', 
-  product: 'Pacote de Fubá Yoki 500g' },
-  { uri: 'https://savegnago.vteximg.com.br/arquivos/ids/278710-1000-1000/CARNE-BOVINA-COXAO-MOLE-MOIDO-BANDEJA-50.jpg?v=636276148425930000', 
-  product: 'Bandeja Carne Coxão Mole 1Kg' },
-  { uri: 'https://produtos-dbcommerce.s3.amazonaws.com/5819.jpg', 
-  product: 'Caixa de pizza Sadia' },
-  { uri: 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA02/CONTENIDOS/201410/16/00118124600349____1__600x600.jpg', 
-  product: 'Mix de Verduras 500g' },
-  { uri: 'https://mambo.vteximg.com.br/arquivos/ids/209482-190-190/215994_Morango-Bandeja-270g_1157-copiar.jpg?v=636337304891130000', 
-  product: 'Bandeja de Morango 300g' },
-  { uri: 'https://savegnago.vteximg.com.br/arquivos/ids/277975-1000-1000/MACA-ARGENTINA-750G-BANDEJA.jpg?v=636244065368230000', 
-  product: 'Bandeja de Maçã 750g' },
-  { uri: 'https://supercatalaoonline.com.br/uploads/images/thumbs/uva-rosada-bandeja-04-09-2018-11-16-870-400.jpg', 
-  product: 'Bandeja de Uvas' },
-];
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class CartScreen extends React.Component {
   static navigationOptions = {
@@ -113,10 +83,22 @@ export default class CartScreen extends React.Component {
         <ListItem
           leftAvatar={{ title: 'Açucar Cristal 1KG', source: { uri: 'http://www.portalarp.com.br/arquivos/produtos/AUCAR_CRISTAL_PACOTE_C_05_KG.jpg' } }}
           title='Açucar Cristal 1KG'
-          subtitle='R$ 2,47'
+          subtitle='R$ 3,44'
           chevron
         />
 
+        <ActionButton 
+          buttonColor='rgba(47,149,220,1)' 
+          icon={<Icon name='money' size={25} />}
+          onPress={() => this.props.navigation.navigate('Credit')}
+        />
+
+        {/* <ActionButton
+          buttonColor="rgba(47,149,220,1)"
+          onPress={() => this.props.navigation.navigate('Credit')}
+        >
+        <Icon name="md-cart" />
+        </ActionButton> */}
       </View>
     );
   }

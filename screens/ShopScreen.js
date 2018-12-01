@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { Input } from 'react-native-elements';
 
-import { ExpoConfigView } from '@expo/samples';
 import GridList from 'react-native-grid-list';
 
 const items = [
@@ -33,7 +33,9 @@ export default class ShopScreen extends React.Component {
   };
 
   renderItem = ({ item, index }) => (
-    <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeScreen')} title="{item.name}">
+    <TouchableOpacity 
+      onPress={() => this.props.navigation.navigate('Products')}
+      title="{item.name}">
       <Image style={stylesNews.image} source={item.thumbnail} />
     </TouchableOpacity>
   );
@@ -41,6 +43,14 @@ export default class ShopScreen extends React.Component {
   render() {
     return (
       <View style={stylesNews.container}>
+
+      <Input
+          containerStyle={{alignSelf: 'center'}}
+          placeholder='Pesquisar...'
+          leftIcon={{ type: 'font-awesome', name: 'search' }}
+          rightIcon={{ type: 'font-awesome', name: 'microphone' }}
+        />
+
         <GridList
           showSeparator
           separatorBorderWidth={10}

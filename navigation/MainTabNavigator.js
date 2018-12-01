@@ -9,7 +9,7 @@ import CreditScreen from '../screens/CreditScreen';
 import AccountScreen from '../screens/AccountScreen';
 
 const ShopStack = createStackNavigator({
-  Home: ShopScreen,
+  Shop: ShopScreen,
 });
 
 ShopStack.navigationOptions = {
@@ -27,7 +27,7 @@ ShopStack.navigationOptions = {
 };
 
 const ProductsStack = createStackNavigator({
-  Links: ProductsScreen,
+  Products: ProductsScreen,
 });
 
 ProductsStack.navigationOptions = {
@@ -55,7 +55,7 @@ CartStack.navigationOptions = {
 };
 
 const CreditStack = createStackNavigator({
-  Settings: CreditScreen,
+  Credit: CreditScreen,
 });
 
 CreditStack.navigationOptions = {
@@ -69,7 +69,7 @@ CreditStack.navigationOptions = {
 };
 
 const AccountStack = createStackNavigator({
-  News: AccountScreen,
+  Account: AccountScreen,
 });
 
 AccountStack.navigationOptions = {

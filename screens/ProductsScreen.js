@@ -8,10 +8,10 @@ import {
   View,
 } from 'react-native';
 
+import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 
-import { ExpoConfigView } from '@expo/samples';
 import GridList from 'react-native-grid-list';
 
 const items = [
@@ -61,7 +61,7 @@ export default class ProductsScreen extends React.Component {
       <View style={styles.container}>
 
         <Input
-          containerStyle={{marginLeft: 20}}
+          containerStyle={{alignSelf: 'center'}}
           placeholder='Pesquisar...'
           leftIcon={{ type: 'font-awesome', name: 'search' }}
           rightIcon={{ type: 'font-awesome', name: 'microphone' }}
@@ -73,6 +73,12 @@ export default class ProductsScreen extends React.Component {
           data={items}
           numColumns={4}
           renderItem={this.renderItem}
+        />
+
+        <ActionButton 
+          buttonColor='rgba(47,149,220,1)' 
+          icon={<Icon name='shopping-cart' size={25} />}
+          onPress={() => this.props.navigation.navigate('Cart')}
         />
 
       </View>
